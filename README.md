@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Tutorials followed:
+
+- [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
+- [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+- [Redux Essentials -> Part 3: Basic Redux Data Flow](https://redux.js.org/tutorials/essentials/part-3-data-flow)
+
 ## Available Scripts
 
 In the project directory, you can run:
