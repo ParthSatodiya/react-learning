@@ -1,6 +1,7 @@
 import {useState} from "react";
 import Game from "./app/Game/Game";
 import FilterableProductTable from "./app/FilterableProductTable/FilterableProductTable";
+import SocialMediaFeed from "./app/SocialMediaFeed/SocialMediaFeed";
 
 const products = [
     {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
@@ -13,6 +14,7 @@ const products = [
 
 const TIC_TAC_TOE = 'tic-tac-toe';
 const PRODUCT_TABLE = 'product-table';
+const SOCIAL_MEDIA_FEED = 'social-media-feed';
 
 
 function MainApp(props) {
@@ -20,7 +22,8 @@ function MainApp(props) {
 
     const appList = [
         {id: TIC_TAC_TOE, component: <Game/>},
-        {id: PRODUCT_TABLE, component: <FilterableProductTable products={products}/>}
+        {id: PRODUCT_TABLE, component: <FilterableProductTable products={products}/>},
+        {id: SOCIAL_MEDIA_FEED, component: <SocialMediaFeed/>}
     ];
 
     function renderCurrentApp() {
@@ -32,21 +35,19 @@ function MainApp(props) {
     }
 
     return (
-        <div>
-            <nav style={{display: 'flex', backgroundColor: 'lightgray', fontSize: '20px'}}>
-                <span style={{marginRight: '1em'}}>Demos: </span>
-                {appList.map(app => {
-                    return (
-                        <button
-                            key={app.id}
-                            style={{marginRight: '1em', backgroundColor: currentApp===app.id ? 'darkgray' : 'white'}}
-                            onClick={() => setCurrentApp(app.id)}
-                        >
-                            {app.id}
-                        </button>
-                    )
-                })}
-            </nav>
+        <div className="container">
+            <h4>Demos: </h4>
+            {appList.map(app => {
+                return (
+                    <button
+                        style={{'margin': '1px'}}
+                        key={app.id}
+                        onClick={() => setCurrentApp(app.id)}
+                    >
+                        {app.id}
+                    </button>
+                )
+            })}
             <hr/>
             {renderCurrentApp()}
         </div>

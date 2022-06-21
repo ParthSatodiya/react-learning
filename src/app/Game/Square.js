@@ -14,7 +14,7 @@
 export default function Square(props) {
     return (
         <button 
-            className='square'
+            className='game-square'
             onClick={props.onClick}
         >
             {props.value}
