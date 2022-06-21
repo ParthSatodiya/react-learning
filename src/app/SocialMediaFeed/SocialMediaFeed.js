@@ -5,28 +5,34 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom'
+import { PostsList } from './features/posts/PostsList'
 
 import { Navbar } from './app/Navbar'
 import store from './app/store'
+import React from 'react'
+import { AddPostForm } from './features/posts/AddPostForm'
 
 function SocialMediaFeed() {
   return (
     <Provider store={store}>
-      <Router className={'social-media-app'}>
-        <Navbar />
-        <div className="App">
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <section>
-                  <h2>Welcome to the Redux Essentials example app!</h2>
-                </section>
-              )}
-            />
-            <Redirect to="/" />
-          </Switch>
+      <Router>
+        <div className="social-media-app">
+          <Navbar/>
+          <div className="App">
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <React.Fragment>
+                    <AddPostForm/>
+                    <PostsList/>
+                  </React.Fragment>
+                )}
+              />
+              <Redirect to="/" />
+            </Switch>
+          </div>
         </div>
       </Router>
     </Provider>

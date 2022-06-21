@@ -48,10 +48,11 @@ ol, ul {
 
 /*** Social Media Feed App ***/
 
+:root {
+  --redux-color: #764abc;
+}
+
 .social-media-app {
-  :root {
-    --redux-color: #764abc;
-  }
   
   body {
     margin: 0;
