@@ -2,6 +2,7 @@ import {useState} from "react";
 import Game from "./app/Game/Game";
 import FilterableProductTable from "./app/FilterableProductTable/FilterableProductTable";
 import SocialMediaFeed from "./app/SocialMediaFeed/SocialMediaFeed";
+import ParentComponent from "./app/ReactMemo/ParentComponent";
 
 const products = [
     {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
@@ -15,6 +16,7 @@ const products = [
 const TIC_TAC_TOE = 'tic-tac-toe';
 const PRODUCT_TABLE = 'product-table';
 const SOCIAL_MEDIA_FEED = 'social-media-feed';
+const REACT_MEMO = 'react-memo';
 
 
 function MainApp(props) {
@@ -23,7 +25,8 @@ function MainApp(props) {
     const appList = [
         {id: TIC_TAC_TOE, component: <Game/>},
         {id: PRODUCT_TABLE, component: <FilterableProductTable products={products}/>},
-        {id: SOCIAL_MEDIA_FEED, component: <SocialMediaFeed/>}
+        {id: SOCIAL_MEDIA_FEED, component: <SocialMediaFeed/>},
+        {id: REACT_MEMO, component: <ParentComponent/>}
     ];
 
     function renderCurrentApp() {

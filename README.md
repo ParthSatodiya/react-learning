@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
 - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 - [Redux Essentials -> Part 3: Basic Redux Data Flow](https://redux.js.org/tutorials/essentials/part-3-data-flow)
+- [React.memo() vs useMemo()](https://blog.logrocket.com/react-memo-vs-usememo/)
 
 ## Available Scripts
 
