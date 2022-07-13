@@ -9,12 +9,19 @@ import { PostsList } from './features/posts/PostsList'
 
 import { Navbar } from './app/Navbar'
 import store from './app/store'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AddPostForm } from './features/posts/AddPostForm'
 import { SinglePostPage } from './features/posts/SinglePostPage'
 import { EditPostForm } from './features/posts/EditPostForm'
+import { fetchUsers } from './features/users/usersSlice'
 
 function SocialMediaFeed() {
+
+  useEffect(() => {
+    store.dispatch(fetchUsers());
+  }, []);
+  
+
   return (
     <Provider store={store}>
       <Router>
